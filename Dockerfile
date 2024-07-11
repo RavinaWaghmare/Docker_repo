@@ -5,5 +5,5 @@ WORKDIR /student-ui
 RUN mvn clean package
 FROM tomcat:alpine
 COPY --from=build /student-ui/target/**.war webapps/student.war
-CMD ["catelina.sh","run"]
+CMD ["catalina.sh","run"]
 
