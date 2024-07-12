@@ -6,4 +6,5 @@ RUN mvn clean package
 FROM tomcat:alpine
 COPY --from=build /student-ui/target/**.war webapps/student.war
 CMD ["catalina.sh","run"]
+CMD ["echo","hello"]
 
